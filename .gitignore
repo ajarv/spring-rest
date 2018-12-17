@@ -1,3 +1,4 @@
+build
 target
 .class
 .classpath
@@ -5,3 +6,5 @@ target
 .settings/
 .idea
 *.iml
+gradle
+gradlew*
