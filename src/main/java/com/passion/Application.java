@@ -4,6 +4,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.metrics.export.prometheus.EnablePrometheusMetrics;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.google.common.base.Predicate;
 
@@ -25,6 +27,7 @@ import static com.google.common.base.Predicates.*;
 @EnablePrometheusMetrics
 @EnableSwagger2
 @ComponentScan(basePackages = {"com.passion"})
+@RestController
 public class Application {
 
 	@Value("${shift.rest.disableValidator}")
@@ -42,6 +45,13 @@ public class Application {
             .select()
             .paths(apiPaths())
             .build();
+    }
+    
+    @RequestMapping(value = "/")
+    public String index() {
+
+
+        return "redirect:/swagger-ui.html";
     }
     
     @Bean
