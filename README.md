@@ -21,7 +21,7 @@ oc new-project sunset --display-name "Sunset Blvd"
 
 Deploy the App using s2i strategy
 ```
-oc new-app wildfly~https://github.com/ajarv/spring-rest.git --name green-rest-app
+oc new-app appuio/s2i-maven-java~https://github.com/ajarv/spring-rest.git --name green-rest-app
 ``` 
 
 Success if your console indicates
