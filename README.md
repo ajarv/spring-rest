@@ -42,3 +42,10 @@ app_host_name=green-rest-app.dev.${INFRA_NODE_LB_IP}.nip.io
 oc expose svc/green-rest-app --hostname=${app_host_name}
 
 ```
+
+
+## Cleanup 
+```
+oc delete project sunset
+
+```
