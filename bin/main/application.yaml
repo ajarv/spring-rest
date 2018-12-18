@@ -1,0 +1,12 @@
+endpoints:
+  shutdown:
+    enabled: true
+  prometheus:
+    sensitive: false
+
+springfox:
+  documentation.swagger.v2.path=/swagger.json
+
+shift:
+  rest:
+    disableValidator: true

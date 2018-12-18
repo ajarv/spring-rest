@@ -31,7 +31,7 @@ public class GreetingController {
 
     @GetMapping("/")
     public RedirectView index() {
-        return new RedirectView("swagger-ui.html");
+        return new RedirectView("index.html");
     }
 
 

@@ -21,7 +21,7 @@ oc new-project sunset --display-name "Sunset Blvd"
 
 
 ```
-oc new-app redhat-openjdk18-openshift:1.1~https://github.com/ajarv/spring-rest.git -name green-rest-app
+oc new-app redhat-openjdk18-openshift:1.1~https://github.com/ajarv/spring-rest.git --name green-rest-app
 ``` 
 
 Success if your console indicates
